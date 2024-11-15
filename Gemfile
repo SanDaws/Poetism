@@ -43,10 +43,23 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "dotenv", "~> 3.1", ">= 3.1.4"
+  # rspec-rails integrates the Rails testing helpers into RSpec.
+  gem "rspec-rails", "~> 7.1"
+  # factory_bot provides a framework and DSL for defining and using factories - less error-prone, more explicit, and all-around easier to work with than fixtures
+  gem "factory_bot_rails", "~> 6.4", ">= 6.4.4"
+  gem "rails-controller-testing", "~> 1.0", ">= 1.0.5"
+  # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
+  gem "faker", "~> 3.5", ">= 3.5.1"
+  # Code coverage for Ruby with a UI
+  gem "simplecov", "~> 0.22.0"
+  # pruebas de integración o pruebas de características (feature tests)
+  gem "capybara"
+  gem "selenium-webdriver"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 end
-
