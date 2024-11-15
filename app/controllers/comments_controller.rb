@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  # authentification to create a new publication
+  before_action :authenticate_user!, except: [ :index, :show ]
   before_action :set_comment, only: %i[ show edit update destroy ]
 
   # GET /comments

@@ -3,4 +3,5 @@ class Writer < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable, :confirmable, :lockable
+  has_many :publications, dependent: :destroy
 end

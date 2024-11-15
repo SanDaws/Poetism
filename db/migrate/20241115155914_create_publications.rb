@@ -4,8 +4,8 @@ class CreatePublications < ActiveRecord::Migration[7.2]
       t.string :title, null: false
       t.text :publicaiton_text, null: false
       t.text :tags, null: false
-      t.references :Category, null: false, foreign_key: true
-      t.references :Writer, null: false, foreign_key: true
+      t.references :category, null: false, foreign_key: true
+      t.references :writer, null: false, foreign_key: true
 
       t.timestamps
     end
