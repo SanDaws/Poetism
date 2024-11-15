@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
   # authentification to create a new publication
-  before_action :authenticate_user!, except: [ :index, :show ]
+
   before_action :set_publication, only: %i[ show edit update destroy ]
 
   # GET /publications
@@ -55,6 +55,6 @@ class PublicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def publication_params
-      params.require(:publication).permit(:title, :publicaiton_text, :tags, :Category_id, :Writer_id)
+      params.require(:publication).permit(:title, :publicaiton_text, :tags, :category_id, :writer_id)
     end
 end

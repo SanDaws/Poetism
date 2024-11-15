@@ -4,4 +4,5 @@ class Writer < ApplicationRecord
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable, :confirmable, :lockable
   has_many :publications, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end

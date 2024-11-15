@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   # authentification to create a new publication
-  before_action :authenticate_user!, except: [ :index, :show ]
+
   before_action :set_comment, only: %i[ show edit update destroy ]
 
   # GET /comments
@@ -55,6 +55,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      params.require(:comment).permit(:Publication_id, :Writer_id, :comment)
+      params.require(:comment).permit(:Publication_id, :writer_id, :comment)
     end
 end
